@@ -1,4 +1,4 @@
-# ReactJS Boilerplate
+# My Website
 
 > A simple React project boilerplate.
 
