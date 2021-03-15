@@ -9,9 +9,10 @@ const Welcome: React.FC = () => {
       <h1>
         I develop solutions
       </h1>
-      <p>I'm a software engineer based in Boston, MA specializing <br />
-      in building (and occasionally designing) exceptional websites, <br />
-      applications, and everything in between.</p>
+      <p>I'm a guy who loves working with challenging and creative projects. 
+        I love to develop solutions through technology and positively impact people, 
+        I am in constant search for best practices and also trying new things.
+      </p>
       <button>Get in Touch</button>
     </Container>
   );

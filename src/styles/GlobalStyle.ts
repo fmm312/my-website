@@ -6,4 +6,9 @@ export const GlobalStyle = createGlobalStyle`
     padding: 0;
     box-sizing: border-box;
   }
+
+  button {
+    cursor: pointer;
+    outline: none;
+  }
 `
