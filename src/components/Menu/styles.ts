@@ -2,9 +2,9 @@ import styled from "styled-components";
 
 export const Container = styled.div`
   grid-area: menu;
-  /* background: rgba(57, 62, 70, .3); */
+  background: rgba(57, 62, 70, .3);
   color: ${props => props.theme.colors.text};
-  border-radius: 0px 22px 22px 0px;
+  border-radius: 0px 2px 2px 0px;
   width: 60px;
   position: fixed;
   top: 40%;
