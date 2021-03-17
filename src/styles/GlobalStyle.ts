@@ -11,4 +11,13 @@ export const GlobalStyle = createGlobalStyle`
     cursor: pointer;
     outline: none;
   }
+
+  h1, h2 {
+    font-family: 'Poppins', sans-serif;
+  }
+
+  p {
+    font-family: 'Nunito Sans', sans-serif;
+    opacity: .8;
+  }
 `

@@ -9,4 +9,7 @@ export const Container = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  /* position: fixed;
+  width: 95%;
+  z-index: 10; */
 `;

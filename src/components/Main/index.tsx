@@ -16,7 +16,7 @@ const Main: React.FC = () => {
       <About />
       <Carrer />
       <Portfolio />
-      <Articles />
+      {/* <Articles /> */}
       <Contact />
     </Container>
   );

@@ -37,7 +37,7 @@ export const Container = styled.div`
     padding: 12px 40px;
     font-size: 16px;
     margin-top: 20px;
-    border-radius: 20px;
+    border-radius: 4px;
     transition: all 500ms ease;
     text-transform: uppercase;
     font-size: 12px;

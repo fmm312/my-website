@@ -47,10 +47,11 @@ export const Container = styled.div`
     margin-right: 20px;
     margin-bottom: 20px;
     opacity: .8;
-    transition: all 500ms ease;
+    transition: all 300ms ease;
 
     &:hover {
       opacity: initial;
+      filter: brightness(1.75);
     }
   }
 
