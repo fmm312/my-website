@@ -4,10 +4,10 @@ export const Container = styled.div`
   grid-area: menu;
   background: rgba(57, 62, 70, .3);
   color: ${props => props.theme.colors.text};
-  border-radius: 0px 2px 2px 0px;
+  border-radius: 0px 6px 6px 0px;
   width: 60px;
   position: fixed;
-  top: 40%;
+  top: 35%;
   padding: 30px 0px;
   box-sizing: border-box;
   display: flex;
@@ -29,7 +29,7 @@ export const Container = styled.div`
     transition: all 500ms ease;
   }
 
-  .icon-menu:hover {
+  .icon-menu:hover, .active {
     color: ${props => props.theme.colors.primary};
   }
 

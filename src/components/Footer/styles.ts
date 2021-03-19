@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const Container = styled.div`
   grid-area: footer;
-  padding: 40px 100px 20px 100px;
+  padding: 40px 120px 20px 120px;
   text-align: center;
 
   .icon {

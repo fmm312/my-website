@@ -1,4 +1,4 @@
-import React from 'react';
+import { useEffect, useState } from 'react';
 
 import { Container } from './styles';
 
@@ -7,16 +7,29 @@ import Main from '../Main';
 import Menu from '../Menu';
 import Right from '../Right';
 import Footer from '../Footer';
+import Splash from '../Splash';
 
 const Layout: React.FC = () => {
+  const [renderSplash, setRenderSplash] = useState(true);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setRenderSplash(false);
+    },3000)
+  }, []);
+
   return (
-    <Container>
-      <Header />
-      <Main />
-      <Menu />
-      <Right />
-      <Footer />
-    </Container>
+    renderSplash ? (
+      <Splash />
+    ) : (
+      <Container>
+        <Header />
+        <Main />
+        <Menu />
+        <Right />
+        <Footer />
+      </Container>
+    )  
   );
 }
 

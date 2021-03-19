@@ -1,26 +1,30 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Container } from './styles';
 import Switch from "react-switch";
 
-interface Props {
-  toggleTheme(): void;
-}
-
-const Header: React.FC<Props> = () => {
+const Header: React.FC = () => {
   const [checked, setChecked] = useState(false);
+
+  useEffect(() => {
+    sessionStorage.setItem('theme', checked ? 'dark' : 'light');
+  }, [checked]);
+
+  function handleChange() {
+    setChecked(!checked);
+  }
 
   return (
     <Container>
-      <p>Logo</p>
+      <p name="home">Logo</p>
       <Switch
-        // checked={title === 'dark'}
+        checked={checked}
         checkedIcon={false}
         uncheckedIcon={false}
         height={10}
         width={40}
         handleDiameter={20}
-        // offColor={shade(0.15, colors.primary)}
-        // onColor={colors.secundary}
+        onChange={handleChange}
+        onColor="#00adb5"
       />
     </Container>
   );

@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  padding: 20px 100px;
+  padding: 20px 120px;
   color: ${props=> props.theme.colors.text};
 
   > h2 {
@@ -16,7 +16,11 @@ export const Container = styled.div`
     }
   }
 
-  > h1 {
+  > div {
+    margin-top: 30px;
+  }
+
+  > h1, .title {
     font-family: 'Poppins', sans-serif;
     font-size: 74px;
     line-height: 85px;
@@ -49,4 +53,5 @@ export const Container = styled.div`
     background-color: ${props=> props.theme.colors.primary};
     color: ${props=> props.theme.colors.text};
   }
+  
 `;

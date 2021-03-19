@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  padding: 80px 100px;
+  padding: 80px 120px;
   color: ${props=> props.theme.colors.text};
 
   > h1 {
@@ -32,6 +32,8 @@ export const Container = styled.div`
 
     > div {
       padding-right: 40px;
+      position: relative;
+      bottom: 0px;
     }
   }
 
@@ -60,5 +62,46 @@ export const Container = styled.div`
     margin-right: 15px;
     position: relative;
     top: 3px;
+  }
+
+  .form-control {
+    display: flex;
+    align-items: center;
+    margin-top: 15px;
+    margin-right: 25px;
+    cursor: pointer;
+    transition: all 300ms ease;
+
+    &:hover {
+        filter: brightness(1.5);
+      }
+
+    .radio-button {
+      width: 13px;
+      height: 13px;
+      background-color: transparent;
+      border-radius: 50%;
+      border: 2px solid ${props=> props.theme.colors.primary};
+      cursor: pointer;
+      margin-right: 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      .radio-button-bullet {
+        width: 7px;
+        height: 7px;
+        background-color: ${props=> props.theme.colors.primary};
+        border-radius: 50%;
+        cursor: pointer;
+      }
+    }
+
+    span {
+      font-family: 'Nunito Sans', sans-serif;
+      font-weight: 400;
+      letter-spacing: 1px;
+      font-size: 14px;
+    }
   }
 `;

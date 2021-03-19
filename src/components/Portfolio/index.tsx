@@ -58,7 +58,7 @@ const projects = [
 const Portfolio: React.FC = () => {
   return (
     <Container>
-      <h1>
+      <h1 name="portfolio">
         Some interesting projects<br /> that I developed
       </h1>
       <div className="line-bellow-title" />

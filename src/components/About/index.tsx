@@ -1,4 +1,4 @@
-import React from 'react';
+import { useState } from 'react';
 
 import { Container } from './styles';
 
@@ -10,9 +10,69 @@ import { SiJquery, SiRedux, SiTypescript } from 'react-icons/si';
 import { BiRightArrow }from 'react-icons/bi';
 
 const About: React.FC = () => {
+  const [isChecked, setIsChecked] = useState('1');
+
+  function renderCategories() {
+    switch (isChecked) {
+      case '1':
+        return (
+          <div>
+            <h4>
+              <BiRightArrow  className="skill-icon-arrow"/>
+              Technologies I master
+            </h4>
+            <IoLogoJavascript className="skill-icon" />
+            <FaReact className="skill-icon" />
+            <SiTypescript className="skill-icon" />
+            <DiCss3 className="skill-icon" />
+            <DiSass className="skill-icon" />
+            <AiFillHtml5 className="skill-icon" />
+            <SiJquery className="skill-icon" />
+            <SiRedux className="skill-icon" />
+          </div>
+        )
+
+      case '2':
+        return (
+          <div>
+            <h4>
+              <BiRightArrow  className="skill-icon-arrow"/>
+              Tools that work
+            </h4>
+            <IoLogoJavascript className="skill-icon" />
+            <FaReact className="skill-icon" />
+            <SiTypescript className="skill-icon" />
+            <DiCss3 className="skill-icon" />
+            <DiSass className="skill-icon" />
+            <AiFillHtml5 className="skill-icon" />
+            <SiJquery className="skill-icon" />
+            <SiRedux className="skill-icon" />
+          </div>
+        )
+
+      case '3':
+        return (
+          <div>
+            <h4>
+              <BiRightArrow  className="skill-icon-arrow"/>
+              Other technologies I use
+            </h4>
+            <IoLogoJavascript className="skill-icon" />
+            <FaReact className="skill-icon" />
+            <SiTypescript className="skill-icon" />
+            <DiCss3 className="skill-icon" />
+            <DiSass className="skill-icon" />
+            <AiFillHtml5 className="skill-icon" />
+            <SiJquery className="skill-icon" />
+            <SiRedux className="skill-icon" />
+          </div>
+        )
+    }
+  }
+
   return (
     <Container>
-      <h1>About me</h1>
+      <h1 name="profile">About me</h1>
       <div className="line-bellow-title" />
       
       <div>
@@ -28,20 +88,40 @@ const About: React.FC = () => {
         </p>
 
         <div>
-          <h4>
-           <BiRightArrow  className="skill-icon-arrow"/>
-            Technologies I master
-          </h4>
-          <IoLogoJavascript className="skill-icon" />
-          <FaReact className="skill-icon" />
-          <SiTypescript className="skill-icon" />
-          <DiCss3 className="skill-icon" />
-          <DiSass className="skill-icon" />
-          <AiFillHtml5 className="skill-icon" />
-          <SiJquery className="skill-icon" />
-          <SiRedux className="skill-icon" />
+          {renderCategories()}
+
+          <div style={{ display: 'flex' }}>
+            <div 
+              className="form-control"
+              onClick={() => setIsChecked('1')}
+            >
+              <div className="radio-button">
+                {isChecked === '1' && <div className="radio-button-bullet"/>}
+              </div>
+              <span>Tecnologies</span>
+            </div>
+
+            <div 
+              className="form-control" 
+              onClick={() => setIsChecked('2')}
+            >
+              <div className="radio-button">
+                {isChecked === '2' && <div className="radio-button-bullet"/>}
+              </div>
+              <span>Tools</span>
+            </div>
+
+            <div 
+              className="form-control"
+              onClick={() => setIsChecked('3')}
+            >
+              <div className="radio-button">
+                {isChecked === '3' && <div className="radio-button-bullet"/>}
+              </div>
+              <span>Others</span>
+            </div>
+          </div>
         </div>
-        
       </div>
      
      

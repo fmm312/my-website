@@ -5,7 +5,7 @@ import { Container } from './styles';
 const Carrer: React.FC = () => {
   return (
     <Container>
-      <h1>
+      <h1 name="carrer">
         Technology experiences
       </h1>
       <div className="line-bellow-title" />

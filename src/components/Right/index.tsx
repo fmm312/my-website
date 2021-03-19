@@ -4,6 +4,8 @@ import { Container } from './styles';
 
 import { BiUpArrow }from 'react-icons/bi';
 
+import { Link } from "react-scroll";
+
 const Right: React.FC = () => {
   const [position, setPosition] = useState(0);
 
@@ -17,11 +19,18 @@ const Right: React.FC = () => {
     <Container>
       {/* <p>fmm312@gmail.com</p>
       <span /> */}
-
+      
       {position > 300 && (
-        <div>
-          <BiUpArrow className="icon" />
-        </div>
+        <Link
+            to="home"
+            smooth={true}
+            offset={-70}
+            duration={700}
+        >
+          <div>
+            <BiUpArrow className="icon" />
+          </div>
+        </Link>
       )}
     </Container>
   );

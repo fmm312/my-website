@@ -25,7 +25,7 @@ export const Container = styled.div`
     bottom: 0;
   }
 
-  > div {
+  div {
     width: 20px;
     height: 20px;
     border: 2px solid ${props => props.theme.colors.primary};

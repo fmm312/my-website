@@ -20,4 +20,14 @@ export const GlobalStyle = createGlobalStyle`
     font-family: 'Nunito Sans', sans-serif;
     opacity: .8;
   }
+
+  ::-webkit-scrollbar {
+    width: 9px;
+    background: rgba(34, 40, 49, .8);
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: rgba(34, 40, 49, .7);
+    border-radius: 8px;
+  }
 `
