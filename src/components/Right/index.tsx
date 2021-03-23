@@ -17,9 +17,6 @@ const Right: React.FC = () => {
 
   return (
     <Container>
-      {/* <p>fmm312@gmail.com</p>
-      <span /> */}
-      
       {position > 300 && (
         <Link
             to="home"

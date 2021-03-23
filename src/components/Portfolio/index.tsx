@@ -4,56 +4,7 @@ import { BsBoxArrowUpRight } from "react-icons/bs";
 import { AiFillGithub } from "react-icons/ai";
 import { BiRightArrow }from 'react-icons/bi';
 
-const projects = [
-  {
-    'id': '01',
-    'github': '#',
-    'link': '#',
-    'title': 'Pomodoro Timer',
-    'tecnologies': 'Next.js | TypeScript',
-    'description': 'Relógio que marca as horas com tecnica de pomororo'
-  },
-  {
-    'id': '01',
-    'github': '#',
-    'link': '#',
-    'title': 'Pomodoro Timer',
-    'tecnologies': 'Next.js | TypeScript',
-    'description': 'Relógio que marca as horas com tecnica de pomororo'
-  },
-  {
-    'id': '01',
-    'github': '#',
-    'link': '#',
-    'title': 'Pomodoro Timer',
-    'tecnologies': 'Next.js | TypeScript',
-    'description': 'Relógio que marca as horas com tecnica de pomororo'
-  },
-  {
-    'id': '01',
-    'github': '#',
-    'link': '#',
-    'title': 'Pomodoro Timer',
-    'tecnologies': 'Next.js | TypeScript',
-    'description': 'Relógio que marca as horas com tecnica de pomororo'
-  },
-  {
-    'id': '01',
-    'github': '#',
-    'link': '#',
-    'title': 'Pomodoro Timer',
-    'tecnologies': 'Next.js | TypeScript',
-    'description': 'Relógio que marca as horas com tecnica de pomororo'
-  },
-  {
-    'id': '01',
-    'github': '#',
-    'link': '#',
-    'title': 'Pomodoro Timer',
-    'tecnologies': 'Next.js | TypeScript',
-    'description': 'Relógio que marca as horas com tecnica de pomororo'
-  }
-]
+import { projects } from '../../utils/projects';
 
 const Portfolio: React.FC = () => {
   return (
