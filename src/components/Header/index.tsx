@@ -1,33 +1,79 @@
 import { useState, useEffect } from 'react';
-import { Container } from './styles';
 import Switch from "react-switch";
 
-import { WiMoonAltWaningCrescent2 }from 'react-icons/wi';
+import { Container } from './styles';
 
-const Header: React.FC = () => {
-  const [checked, setChecked] = useState(false);
+const itens = [
+  {
+    name: 'About',
+    number: '01.',
+    target: 'home'
+  },
+  {
+    name: 'Experience',
+    number: '02.',
+    target: 'home'
+  },
+  {
+    name: 'Portfolio',
+    number: '03.',
+    target: 'home'
+  },
+  {
+    name: 'Posts',
+    number: '04.',
+    target: 'home'
+  },
+  {
+    name: 'Contact',
+    number: '05.',
+    target: 'home'
+  },
+]
+
+interface HeaderProps {
+  toggleTheme: () => void,
+  theme: boolean
+}
+
+const Header: React.FC<HeaderProps> = ({ toggleTheme, theme }) => {
+  const [showHeader, setShowHeader] = useState(false);
 
   useEffect(() => {
-    sessionStorage.setItem('theme', checked ? 'dark' : 'light');
-  }, [checked]);
-
-  function handleChange() {
-    setChecked(!checked);
-  }
+    if (typeof window !== "undefined") {
+      window.addEventListener("scroll", () =>
+      setShowHeader(window.pageYOffset > 200)
+      );
+    };
+  }, []);
 
   return (
-    <Container>
-      <p name="home">F</p>
+    <Container showHeader={showHeader}>
+      <p>F</p>
+      
       <div>
-        <WiMoonAltWaningCrescent2 className="icon" />
+        <div>
+          {itens.map(item => (
+            <>
+              <span className="menuNumber">
+                {item.number}
+              </span>
+
+              <span className="menuName">
+                {item.name}
+              </span>
+            </>
+          ))}
+        </div>
+
         <Switch
-          checked={checked}
+          checked={theme}
           checkedIcon={false}
           uncheckedIcon={false}
-          height={10}
+          height={15}
           width={40}
           handleDiameter={20}
-          onChange={handleChange}
+          onChange={toggleTheme}
           onColor="#00adb5"
         />
       </div>

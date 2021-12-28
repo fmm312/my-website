@@ -2,41 +2,43 @@ import styled from "styled-components";
 
 export const Container = styled.div`
   grid-area: menu;
-  background: rgba(57, 62, 70, .3);
+  /* background: rgba(57, 62, 70, .3); */
   color: ${props => props.theme.colors.text};
   border-radius: 0px 6px 6px 0px;
-  width: 60px;
+  width: 80px;
   position: fixed;
-  top: 35%;
+  bottom: 9%;
   padding: 30px 0px;
   box-sizing: border-box;
   display: flex;
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  /* box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24); */
+  /* box-shadow: rgba(0, 0, 0, 0.35) 0px 2px 8px; */
   opacity: .8;
   transition: all 300ms;
 
   :hover {
-    opacity: initial
+    opacity: initial;
   }
 
   .icon-menu {
-    font-size: 24px;
-    margin-bottom: 35px;
+    font-size: 22px;
+    margin-bottom: 24px;
     cursor: pointer;
-    transition: all 500ms ease;
+    transition: all 400ms ease;
   }
 
   .icon-menu:hover, .active {
     color: ${props => props.theme.colors.primary};
+    transform: translateY(-4px);
   }
 
   > span {
     border-right: 1px solid ${props => props.theme.colors.text};
-    height: 80px;
+    height: 90px;
     position: fixed;
     bottom: 0;
+    opacity: .2;
   }
 `;

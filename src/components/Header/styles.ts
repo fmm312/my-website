@@ -1,14 +1,32 @@
 import styled from 'styled-components';
 
-export const Container = styled.div`
+interface ContainerProps {
+  showHeader: boolean
+}
+
+export const Container = styled.div<ContainerProps>`
   grid-area: header;
-  height: 30px;
-  background-color: ${props => props.theme.colors.background};
+  height: ${props => props.showHeader ? 
+  '20px' : 
+  "50px"}; ;
+  box-shadow: ${props => props.showHeader ? 
+  'rgba(0, 0, 0, 0.35) 0px 2px 8px' : 
+  "none"};
+  transition: all 500ms ease;
+  background-color: ${props => props.showHeader ? 
+  props => props.theme.colors.background : 
+  "transparent"};
   color: ${props => props.theme.colors.text};
-  padding: 20px 60px;
+  opacity: ${props => props.showHeader ? 
+  '.9' : 
+  "none"};
+  padding: 20px 0px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  z-index: 1000;
+  position: fixed;
+  width: 100%;
 
   p {
     color: ${props=> props.theme.colors.primary};
@@ -26,6 +44,8 @@ export const Container = styled.div`
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
+    cursor: pointer;
+    margin-left: 60px;
 
     &:hover {
       filter: brightness(1.75);
@@ -35,6 +55,7 @@ export const Container = styled.div`
   > div {
     display: flex;
     align-items: center;
+    margin-right: 60px;
 
     .icon {
       font-size: 26px;
@@ -42,5 +63,24 @@ export const Container = styled.div`
     }
   }
 
-  
+  .menuNumber {
+    color: ${props=> props.theme.colors.primary};
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: 700;
+    margin-right: 4px;
+    font-size: 12px;
+  }
+
+  .menuName {
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 14px;
+    margin-right: 25px;
+    transition: 0.5s;
+    cursor: pointer;
+    letter-spacing: 0.5px;
+
+    &:hover {
+      color: ${props=> props.theme.colors.primary};
+    }
+  }
 `;

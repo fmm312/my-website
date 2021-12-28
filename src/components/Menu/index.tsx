@@ -1,49 +1,53 @@
+import Fade from 'react-reveal/Fade';
+import { Link } from "react-scroll";
+
 import { Container } from './styles';
 
-import { BsPerson } from "react-icons/bs";
-import { GoHome } from "react-icons/go";
-import { IoRocketOutline } from "react-icons/io5";
-import { MdComputer } from "react-icons/md";
-import { FiMail } from "react-icons/fi";
-
-import { Link } from "react-scroll";
+import { 
+  AiOutlineMedium, 
+  AiOutlineInstagram,
+  AiOutlineWhatsApp
+} from "react-icons/ai";
+import { FiGithub, FiLinkedin } from "react-icons/fi";
 
 const Menu: React.FC = () => {
   const list = [
     {
-      item: <GoHome className="icon-menu" />,
+      item: <FiGithub className="icon-menu" />,
       target: 'home'
     },
     {
-      item: <BsPerson className="icon-menu" />,
-      target: 'profile'
+      item: <FiLinkedin className="icon-menu" />,
+      target: 'https://www.linkedin.com/in/felipemenezesmagalhaes/'
     },
     {
-      item: <IoRocketOutline className="icon-menu" />,
+      item: <AiOutlineMedium className="icon-menu" />,
       target: 'carrer'
     },
     {
-      item: <MdComputer className="icon-menu" />,
+      item: <AiOutlineInstagram className="icon-menu" />,
       target: 'portfolio'
     },
     {
-      item: <FiMail className="icon-menu" />,
-      target: 'contact'
+      item: <AiOutlineWhatsApp className="icon-menu" />,
+      target: 'portfolio'
     },
   ]
 
   return (
     <Container>
-      {list.map((element) => (
-        <Link
+      <Fade bottom duration={500} delay={1800}>
+        {list.map((element) => (
+          <Link
             to={element.target}
             smooth={true}
             offset={-70}
             duration={700}
-        >
-          {element.item}
-        </Link>
-      ))}
+          >
+            {element.item}
+          </Link>
+        ))}
+      </Fade>
       <span />
     </Container>
   );
