@@ -6,20 +6,20 @@ interface ContainerProps {
 
 export const Container = styled.div<ContainerProps>`
   grid-area: header;
-  height: ${props => props.showHeader ? 
-  '20px' : 
-  "50px"}; ;
-  box-shadow: ${props => props.showHeader ? 
-  'rgba(0, 0, 0, 0.35) 0px 2px 8px' : 
-  "none"};
+  height: ${(props) => (props.showHeader
+    ? '20px'
+    : '50px')}; ;
+  box-shadow: ${(props) => (props.showHeader
+    ? 'rgba(0, 0, 0, 0.35) 0px 2px 8px'
+    : 'none')};
   transition: all 500ms ease;
-  background-color: ${props => props.showHeader ? 
-  props => props.theme.colors.background : 
-  "transparent"};
-  color: ${props => props.theme.colors.text};
-  opacity: ${props => props.showHeader ? 
-  '.9' : 
-  "none"};
+  background-color: ${(props) => (props.showHeader
+    ? (props) => props.theme.colors.background
+    : 'transparent')};
+  color: ${(props) => props.theme.colors.text};
+  opacity: ${(props) => (props.showHeader
+    ? '.9'
+    : 'none')};
   padding: 20px 0px;
   display: flex;
   justify-content: space-between;
@@ -33,11 +33,11 @@ export const Container = styled.div<ContainerProps>`
   }
 
   p {
-    color: ${props=> props.theme.colors.primary};
+    color: ${(props) => props.theme.colors.primary};
     font-family: 'Poppins', sans-serif;
     font-weight: 700;
     font-size: 22px;
-    border: 3px solid ${props=> props.theme.colors.primary};
+    border: 3px solid ${(props) => props.theme.colors.primary};
     border-radius: 7px;
     padding: 0px 11px;
     box-sizing: border-box;
@@ -68,7 +68,7 @@ export const Container = styled.div<ContainerProps>`
   }
 
   .menuNumber {
-    color: ${props=> props.theme.colors.primary};
+    color: ${(props) => props.theme.colors.primary};
     font-family: 'Nunito Sans', sans-serif;
     font-weight: 700;
     margin-right: 4px;
@@ -84,7 +84,17 @@ export const Container = styled.div<ContainerProps>`
     letter-spacing: 0.5px;
 
     &:hover {
-      color: ${props=> props.theme.colors.primary};
+      color: ${(props) => props.theme.colors.primary};
     }
+  }
+
+  .activeMenuName {
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 16px;
+    margin-right: 25px;
+    transition: 0.5s;
+    cursor: pointer;
+    letter-spacing: 0.5px;
+    color: ${(props) => props.theme.colors.primary};
   }
 `;

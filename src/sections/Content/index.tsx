@@ -1,3 +1,4 @@
+import React from 'react';
 import Particles from 'react-particles-js';
 import { useSelector, RootStateOrAny } from 'react-redux';
 
@@ -27,8 +28,8 @@ const Content: React.FC = () => {
         return <Portfolio />;
       case 'contact':
         return <Contact />;
-      default: 
-        return <Welcome />
+      default:
+        return <Welcome />;
     }
   }
 
@@ -38,27 +39,27 @@ const Content: React.FC = () => {
         style={{ position: 'absolute', left: 0, top: 0 }}
         width="100%"
         params={{
-          "particles": {
-            "number": {
-            "value": 30
+          particles: {
+            number: {
+              value: 30,
             },
-            "size": {
-            "value": 1.5
-            }
+            size: {
+              value: 1.5,
+            },
           },
-          "interactivity": {
-            "events": {
-            "onhover": {
+          interactivity: {
+            events: {
+              onhover: {
               // "enable": true,
               // "mode": "repulse"
-              }
-            }
-          }
+              },
+            },
+          },
         }}
       />
       {setSelectedSection()}
     </Container>
   );
-}
+};
 
 export default Content;

@@ -1,8 +1,7 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const Container = styled.div`
-  /* padding: 40px 220px; */
-  color: ${props=> props.theme.colors.text};
+  color: ${(props) => props.theme.colors.text};
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -25,15 +24,15 @@ export const TimelineTitle = styled.div`
   margin-top: 15px;
   font-family: 'Nunito Sans', sans-serif;
   font-weight: 700;
-`; 
+`;
 
 export const CompanyName = styled.span`
   font-size: 16px;
   margin-left: 10px;
   font-family: 'Nunito Sans', sans-serif;
   font-weight: 700;
-  color: ${props=> props.theme.colors.primary};
-`; 
+  color: ${(props) => props.theme.colors.primary};
+`;
 
 export const TimelineDescription = styled.div`
   font-family: 'Nunito Sans', sans-serif;
@@ -51,7 +50,7 @@ export const Line = styled.div`
     width: 2px;
     height: 95%;
     left: 20px;
-    background-color: ${props=> props.theme.colors.primary};
+    background-color: ${(props) => props.theme.colors.primary};
     content: "";
   }
 
@@ -72,7 +71,7 @@ export const Line = styled.div`
     position: absolute;
     width: 20px;
     height: 20px;
-    background-color: ${props=> props.theme.colors.primary};
+    background-color: ${(props) => props.theme.colors.primary};
     content: "";
     left: -9px;
     border-radius: 50%;

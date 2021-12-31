@@ -1,9 +1,9 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const Container = styled.div`
   grid-area: menu;
   /* background: rgba(57, 62, 70, .3); */
-  color: ${props => props.theme.colors.text};
+  color: ${(props) => props.theme.colors.text};
   border-radius: 0px 6px 6px 0px;
   width: 80px;
   position: fixed;
@@ -30,12 +30,12 @@ export const Container = styled.div`
   }
 
   .icon-menu:hover, .active {
-    color: ${props => props.theme.colors.primary};
+    color: ${(props) => props.theme.colors.primary};
     transform: translateY(-4px);
   }
 
   > span {
-    border-right: 1px solid ${props => props.theme.colors.text};
+    border-right: 1px solid ${(props) => props.theme.colors.text};
     height: 100px;
     position: fixed;
     bottom: 0;
@@ -43,6 +43,6 @@ export const Container = styled.div`
   }
 
   a {
-    color: ${props => props.theme.colors.text};
+    color: ${(props) => props.theme.colors.text};
   }
 `;

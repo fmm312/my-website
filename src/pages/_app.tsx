@@ -22,12 +22,12 @@ function App() {
   useEffect(() => {
     setTimeout(() => {
       setRenderSplash(false);
-    },3000)
+    }, 3000);
   }, []);
 
   function toggleTheme() {
     setTheme(!theme);
-  };
+  }
 
   return (
     <>
@@ -45,7 +45,7 @@ function App() {
         )}
       </ThemeProvider>
     </>
-  )
+  );
 }
 
 export default storeWrapper.withRedux(App);

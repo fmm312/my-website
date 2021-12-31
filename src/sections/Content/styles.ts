@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const Container = styled.div`
   grid-area: header;
@@ -6,7 +6,7 @@ export const Container = styled.div`
   display: flex;
   align-items: center;
   box-sizing: border-box;
-  color: ${props=> props.theme.colors.text};
+  color: ${(props) => props.theme.colors.text};
   font-family: 'Nunito Sans', sans-serif;
   padding: 40px 220px;
 

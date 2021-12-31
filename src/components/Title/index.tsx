@@ -1,14 +1,14 @@
-import { 
-  Title, 
+import {
+  Title,
   TitleContainer,
   NumberTitle,
-  Line
+  Line,
 } from './styles';
 
 export default function TitleComponent({
   step,
   title,
-  disabledLine=false
+  disabledLine = false,
 }) {
   return (
     <TitleContainer>
@@ -16,5 +16,5 @@ export default function TitleComponent({
       <Title>{title}</Title>
       {!disabledLine && <Line />}
     </TitleContainer>
-  )
+  );
 }

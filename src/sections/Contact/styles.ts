@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const Container = styled.div``;
 
@@ -14,7 +14,7 @@ export const Content = styled.div`
   button {
     border: 2px solid #00adb5;
     background-color: transparent;
-    color: ${props=> props.theme.colors.primary};
+    color: ${(props) => props.theme.colors.primary};
     padding: 12px 25px;
     font-size: 14px;
     margin-top: 20px;
@@ -35,7 +35,7 @@ export const Content = styled.div`
     }
 
     &:hover {
-      background-color: ${props=> props.theme.colors.primary};
+      background-color: ${(props) => props.theme.colors.primary};
       color: #ffffff;
     }
   }
@@ -60,7 +60,6 @@ export const QRCode = styled.div`
   }
 `;
 
-
 export const ImageContainer = styled.div`
   width: 100px;
-`; 
+`;

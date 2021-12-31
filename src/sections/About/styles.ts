@@ -1,8 +1,6 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
-export const Container = styled.div`
-  
-`;
+export const Container = styled.div``;
 
 export const Content = styled.div`
   display: flex;
@@ -32,7 +30,7 @@ export const SkillsContainer = styled.div`
   margin-top: 12px;
 
   .skill-icon-arrow {
-    color: ${props=> props.theme.colors.primary};
+    color: ${(props) => props.theme.colors.primary};
     margin-right: 15px;
     position: relative;
     top: 3px;

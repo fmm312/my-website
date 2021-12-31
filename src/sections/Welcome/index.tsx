@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import Typist from 'react-typist';
 
 import Fade from 'react-reveal/Fade';
@@ -15,12 +15,20 @@ const Welcome: React.FC = () => {
   return (
     <Container>
       <Fade bottom duration={500}>
-        <h2>Hi,<br /> my name is <br /><span>Felipe</span></h2>
+        <h2>
+          Hi,
+          <br />
+          {' '}
+          my name is
+          {' '}
+          <br />
+          <span>Felipe</span>
+        </h2>
       </Fade>
 
       <Fade bottom duration={500} delay={500}>
-      <div>
-        <span className="title">I develop</span>
+        <div>
+          <span className="title">I develop</span>
           {count ? (
             <Typist onTypingDone={() => setCount(0)} avgTypingDelay={100}>
               <span className="title">web aplications.</span>
@@ -32,15 +40,17 @@ const Welcome: React.FC = () => {
               <span className="title">innovative solutions.</span>
               <Typist.Backspace count={21} delay={3000} />
             </Typist>
-          ) :  ""}
-      </div>
+          ) : ''}
+        </div>
       </Fade>
 
       <Fade bottom duration={500} delay={1000}>
-      <button>Get in Touch</button>
+        <a href="https://wa.link/50kkkp" target="_blank" rel="noreferrer">
+          <button>Get in Touch</button>
+        </a>
       </Fade>
     </Container>
   );
-}
+};
 
 export default Welcome;

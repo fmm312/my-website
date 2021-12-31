@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useDispatch } from 'react-redux';
-import Switch from "react-switch";
+import Switch from 'react-switch';
 
 import { Container } from './styles';
 
@@ -8,29 +8,29 @@ const itens = [
   {
     name: 'About',
     number: '01.',
-    target: 'about'
+    target: 'about',
   },
   {
     name: 'Experience',
     number: '02.',
-    target: 'experience'
+    target: 'experience',
   },
   {
     name: 'Skills',
     number: '03.',
-    target: 'skills'
+    target: 'skills',
   },
   {
     name: 'Projects',
     number: '04.',
-    target: 'portfolio'
+    target: 'portfolio',
   },
   {
     name: 'Contact',
     number: '05.',
-    target: 'contact'
+    target: 'contact',
   },
-]
+];
 
 interface HeaderProps {
   toggleTheme: () => void,
@@ -42,24 +42,22 @@ const Header: React.FC<HeaderProps> = ({ toggleTheme, theme }) => {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    if (typeof window !== "undefined") {
-      window.addEventListener("scroll", () =>
-      setShowHeader(window.pageYOffset > 200)
-      );
-    };
+    if (typeof window !== 'undefined') {
+      window.addEventListener('scroll', () => setShowHeader(window.pageYOffset > 200));
+    }
   }, []);
 
   function selectMenu(target) {
-    dispatch({ type: 'SELECT_MENU', selected: target })
+    dispatch({ type: 'SELECT_MENU', selected: target });
   }
 
   return (
     <Container showHeader={showHeader}>
       <p onClick={() => selectMenu('welcome')}>F</p>
-      
+
       <div>
         <div>
-          {itens.map(item => (
+          {itens.map((item) => (
             <>
               <span className="menuNumber">
                 {item.number}
@@ -85,6 +83,6 @@ const Header: React.FC<HeaderProps> = ({ toggleTheme, theme }) => {
       </div>
     </Container>
   );
-}
+};
 
 export default Header;

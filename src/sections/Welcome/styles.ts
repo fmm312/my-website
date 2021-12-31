@@ -1,8 +1,8 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const Container = styled.div`
   padding: 80px 20px !important;
-  color: ${props=> props.theme.colors.text};
+  color: ${(props) => props.theme.colors.text};
   margin-bottom: 200px;
 
   @media(min-width: 1600px) {
@@ -35,7 +35,7 @@ export const Container = styled.div`
   button {
     border: 2px solid #00adb5;
     background-color: transparent;
-    color: ${props=> props.theme.colors.primary};
+    color: ${(props) => props.theme.colors.primary};
     padding: 10px 30px;
     margin-top: 60px;
     border-radius: 4px;
@@ -48,7 +48,7 @@ export const Container = styled.div`
   }
 
   button:hover {
-    background-color: ${props=> props.theme.colors.primary};
-    color: ${props=> props.theme.colors.text};
+    background-color: ${(props) => props.theme.colors.primary};
+    color: ${(props) => props.theme.colors.text};
   }
 `;
