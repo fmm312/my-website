@@ -1,9 +1,8 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  padding: 40px 220px;
+  /* padding: 40px 220px; */
   color: ${props=> props.theme.colors.text};
-
   display: flex;
   flex-direction: column;
   align-items: center;

@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import Typist from 'react-typist';
-import Particles from 'react-particles-js';
+
 import Fade from 'react-reveal/Fade';
 
 import { Container } from './styles';
@@ -14,29 +14,6 @@ const Welcome: React.FC = () => {
 
   return (
     <Container>
-      <Particles
-        style={{ position: 'absolute', left: 0, top: 0 }}
-        width="100%"
-        params={{
-          "particles": {
-            "number": {
-            "value": 30
-            },
-            "size": {
-            "value": 1.5
-            }
-          },
-          "interactivity": {
-            "events": {
-            "onhover": {
-              // "enable": true,
-              // "mode": "repulse"
-              }
-            }
-          }
-        }}
-      />
-
       <Fade bottom duration={500}>
         <h2>Hi,<br /> my name is <br /><span>Felipe</span></h2>
       </Fade>
@@ -62,11 +39,6 @@ const Welcome: React.FC = () => {
       <Fade bottom duration={500} delay={1000}>
       <button>Get in Touch</button>
       </Fade>
-      
-      
-      
-      
-      
     </Container>
   );
 }

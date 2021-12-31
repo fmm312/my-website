@@ -28,6 +28,10 @@ export const Container = styled.div<ContainerProps>`
   position: fixed;
   width: 100%;
 
+  @media(min-width: 1600px) {
+    justify-content: space-around;
+  }
+
   p {
     color: ${props=> props.theme.colors.primary};
     font-family: 'Poppins', sans-serif;
@@ -68,12 +72,12 @@ export const Container = styled.div<ContainerProps>`
     font-family: 'Nunito Sans', sans-serif;
     font-weight: 700;
     margin-right: 4px;
-    font-size: 12px;
+    font-size: 13px;
   }
 
   .menuName {
     font-family: 'Nunito Sans', sans-serif;
-    font-size: 14px;
+    font-size: 16px;
     margin-right: 25px;
     transition: 0.5s;
     cursor: pointer;

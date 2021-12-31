@@ -1,18 +1,15 @@
 import styled from "styled-components";
 
-export const Container = styled.div`
-  padding: 40px 120px;
-  color: ${props=> props.theme.colors.text};
-  display: flex;
-  flex-direction: column;
-  align-items: center;    
-`;
+export const Container = styled.div``;
 
 export const Content = styled.div`
-  width: 50%;
-  text-align: center;
   font-family: 'Nunito Sans', sans-serif;
   margin-top: -15px;
+  display: flex;
+
+  > div {
+    margin-right: 80px;
+  }
 
   button {
     border: 2px solid #00adb5;
@@ -28,9 +25,18 @@ export const Content = styled.div`
     letter-spacing: 3.5px;
     font-weight: 600;
 
+    a {
+      color: #00adb5;
+      text-decoration: none;
+
+      &:hover {
+      color: #ffffff;
+    }
+    }
+
     &:hover {
       background-color: ${props=> props.theme.colors.primary};
-      color: ${props=> props.theme.colors.text};
+      color: #ffffff;
     }
   }
 `;
@@ -40,3 +46,21 @@ export const SecondaryTitle = styled.div`
   font-weight: 800;
   font-size: 25px;
 `;
+
+export const QRCode = styled.div`
+  width: 200px;
+  border-radius: 4px;
+  background-image: url('/wa.link_nzp900.png');
+  height: 200px;
+  background-size: cover;
+
+  @media(min-width: 1400px) {
+    width: 420px;
+    height: 240px;
+  }
+`;
+
+
+export const ImageContainer = styled.div`
+  width: 100px;
+`; 

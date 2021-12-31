@@ -1,20 +1,21 @@
 import { useEffect, useState } from 'react';
-import { ThemeProvider } from 'styled-components'
-import { GlobalStyle } from '../styles/GlobalStyle';
+import { ThemeProvider } from 'styled-components';
 
+import { GlobalStyle } from '../styles/GlobalStyle';
 import light from '../styles/themes/light';
 import dark from '../styles/themes/dark';
-
 import { Container } from '../styles/Layout';
 
 import Header from '../components/Header';
 import Menu from '../components/Menu';
-import ScrollTop from '../components/ScrollTop';
+import Rigth from '../components/Rigth';
 import Splash from '../components/Splash';
 
 import Content from '../sections/Content';
 
-export default function App() {
+import { storeWrapper } from '../store';
+
+function App() {
   const [renderSplash, setRenderSplash] = useState(true);
   const [theme, setTheme] = useState(true);
 
@@ -39,10 +40,12 @@ export default function App() {
             <Header toggleTheme={toggleTheme} theme={theme} />
             <Content />
             <Menu />
-            <ScrollTop />
+            <Rigth />
           </Container>
         )}
       </ThemeProvider>
     </>
   )
 }
+
+export default storeWrapper.withRedux(App);

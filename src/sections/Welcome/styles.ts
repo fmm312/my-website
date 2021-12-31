@@ -1,9 +1,13 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  padding: 20px 150px;
+  padding: 80px 20px !important;
   color: ${props=> props.theme.colors.text};
   margin-bottom: 200px;
+
+  @media(min-width: 1600px) {
+    padding: 80px 300px;
+  }
 
   > h2 {
     font-family: 'Poppins', sans-serif;
@@ -23,24 +27,16 @@ export const Container = styled.div`
 
   > h1, .title {
     font-family: 'Poppins', sans-serif;
-    font-size: 74px;
-    line-height: 85px;
+    font-size: 54px;
+    line-height: 65px;
     font-weight: 900;
-  }
-
-  > p {
-    font-family: 'Nunito Sans', sans-serif;
-    font-size: 18px;
-    opacity: .8;
-    width: 520px;
   }
 
   button {
     border: 2px solid #00adb5;
     background-color: transparent;
     color: ${props=> props.theme.colors.primary};
-    padding: 12px 40px;
-    font-size: 16px;
+    padding: 10px 30px;
     margin-top: 60px;
     border-radius: 4px;
     transition: all 500ms ease;

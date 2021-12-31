@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { useDispatch } from 'react-redux';
 import Switch from "react-switch";
 
 import { Container } from './styles';
@@ -7,27 +8,27 @@ const itens = [
   {
     name: 'About',
     number: '01.',
-    target: 'home'
+    target: 'about'
   },
   {
     name: 'Experience',
     number: '02.',
-    target: 'home'
+    target: 'experience'
   },
   {
-    name: 'Portfolio',
+    name: 'Skills',
     number: '03.',
-    target: 'home'
+    target: 'skills'
   },
   {
-    name: 'Posts',
+    name: 'Projects',
     number: '04.',
-    target: 'home'
+    target: 'portfolio'
   },
   {
     name: 'Contact',
     number: '05.',
-    target: 'home'
+    target: 'contact'
   },
 ]
 
@@ -38,6 +39,7 @@ interface HeaderProps {
 
 const Header: React.FC<HeaderProps> = ({ toggleTheme, theme }) => {
   const [showHeader, setShowHeader] = useState(false);
+  const dispatch = useDispatch();
 
   useEffect(() => {
     if (typeof window !== "undefined") {
@@ -47,9 +49,13 @@ const Header: React.FC<HeaderProps> = ({ toggleTheme, theme }) => {
     };
   }, []);
 
+  function selectMenu(target) {
+    dispatch({ type: 'SELECT_MENU', selected: target })
+  }
+
   return (
     <Container showHeader={showHeader}>
-      <p>F</p>
+      <p onClick={() => selectMenu('welcome')}>F</p>
       
       <div>
         <div>
@@ -59,7 +65,7 @@ const Header: React.FC<HeaderProps> = ({ toggleTheme, theme }) => {
                 {item.number}
               </span>
 
-              <span className="menuName">
+              <span className="menuName" onClick={() => selectMenu(item.target)}>
                 {item.name}
               </span>
             </>

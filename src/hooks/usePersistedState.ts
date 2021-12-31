@@ -5,7 +5,6 @@ function usePersistedState(key: string, initialState: any) {
         if (window) {
             var storageValue = localStorage.getItem(key);
         }
-        
 
         if (storageValue) {
             return JSON.parse(storageValue);

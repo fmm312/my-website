@@ -1,32 +1,24 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  padding: 80px 220px 40px 220px;
-  color: ${props=> props.theme.colors.text};
-
-  @media(min-width: 1400px) {
-    padding: 80px 320px;
-  }
+  
 `;
 
 export const Content = styled.div`
   display: flex;
-  align-items: center;
-  justify-content: center;
 `;
 
 export const Description = styled.div`
-  width: 80%;
-  font-family: 'Nunito Sans', sans-serif;
+  width: 90%;
   opacity: .8;
   letter-spacing: 0.2px;
 `;
 
 export const ImageContainer = styled.div`
-  width: 300px;
+  width: 280px;
   border-radius: 4px;
   background-image: url('/night-coding.gif');
-  height: 180px;
+  height: 170px;
   background-size: cover;
 
   @media(min-width: 1400px) {

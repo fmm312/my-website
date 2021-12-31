@@ -7,7 +7,7 @@ export const Container = styled.div`
   border-radius: 0px 6px 6px 0px;
   width: 80px;
   position: fixed;
-  bottom: 9%;
+  bottom: 10%;
   padding: 30px 0px;
   box-sizing: border-box;
   display: flex;
@@ -36,9 +36,13 @@ export const Container = styled.div`
 
   > span {
     border-right: 1px solid ${props => props.theme.colors.text};
-    height: 90px;
+    height: 100px;
     position: fixed;
     bottom: 0;
     opacity: .2;
+  }
+
+  a {
+    color: ${props => props.theme.colors.text};
   }
 `;

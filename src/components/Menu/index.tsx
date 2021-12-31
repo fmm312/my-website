@@ -14,7 +14,7 @@ const Menu: React.FC = () => {
   const list = [
     {
       item: <FiGithub className="icon-menu" />,
-      target: 'home'
+      target: 'https://github.com/fmm312'
     },
     {
       item: <FiLinkedin className="icon-menu" />,
@@ -22,15 +22,15 @@ const Menu: React.FC = () => {
     },
     {
       item: <AiOutlineMedium className="icon-menu" />,
-      target: 'carrer'
+      target: 'https://medium.com/@fmm312'
     },
     {
       item: <AiOutlineInstagram className="icon-menu" />,
-      target: 'portfolio'
+      target: 'https://www.instagram.com/felipemenezes312/'
     },
     {
       item: <AiOutlineWhatsApp className="icon-menu" />,
-      target: 'portfolio'
+      target: 'https://wa.link/nzp900'
     },
   ]
 
@@ -38,14 +38,9 @@ const Menu: React.FC = () => {
     <Container>
       <Fade bottom duration={500} delay={1800}>
         {list.map((element) => (
-          <Link
-            to={element.target}
-            smooth={true}
-            offset={-70}
-            duration={700}
-          >
+          <a href={element.target} target="_blank">
             {element.item}
-          </Link>
+          </a>
         ))}
       </Fade>
       <span />
