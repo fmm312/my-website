@@ -38,10 +38,15 @@ export default class MyDocument extends Document {
 
           <title>Felipe Menezes</title>
 
-          <meta name="title" content="Felipe Menezes" />
-          <meta name="description" content="Software engineer, JavaScript enthusiast. Passionate about clean code, usability and UX." />
+          <meta property="og:locale" content="pt_BR" />
+          <meta property="og:url" content="https://felipedeveloper.vercel.app/" />
+          <meta property="og:title" content="Felipe Menezes" />
+          <meta property="og:site_name" content="Felipe Meneze" />
+          <meta property="og:description" content="Software engineer, JavaScript enthusiast. Passionate about clean code, usability and UX." />
           <meta property="og:image" content="/logo.png" />
           <meta property="og:image:type" content="image/png" />
+          <meta property="og:image:width" content="400" />
+          <meta property="og:image:height" content="400" />
         </Head>
         <body>
           <Main />
