@@ -10,7 +10,7 @@ import Menu from '../components/Menu';
 import Rigth from '../components/Rigth';
 import Splash from '../components/Splash';
 
-import Content from '../sections/Content';
+import Content from '../components/Content';
 
 import { storeWrapper } from '../store';
 

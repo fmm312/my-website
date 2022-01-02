@@ -10,6 +10,10 @@ export const Description = styled.div`
   width: 90%;
   opacity: .8;
   letter-spacing: 0.2px;
+
+  @media(max-width: 520px) {
+   font-size: 14px;
+  }
 `;
 
 export const ImageContainer = styled.div`

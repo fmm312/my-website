@@ -4,6 +4,10 @@ export const Container = styled.div`
   color: ${(props) => props.theme.colors.text};
   display: flex;
   flex-direction: column;
+
+  @media(max-width: 520px) {
+   font-size: 14px;
+  }
 `;
 
 export const Text = styled.p`

@@ -2,9 +2,12 @@ import { useState, useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import Switch from 'react-switch';
 import Fade from 'react-reveal/Fade';
+
 import { AiOutlineMenu, AiOutlineClose } from 'react-icons/ai';
 
-import { Container, ResposiveMenuButton, ResponsiveMenu } from './styles';
+import {
+  Container, ResposiveMenuButton, ResponsiveMenu, Logo,
+} from './styles';
 
 const itens = [
   {
@@ -61,7 +64,7 @@ const Header: React.FC<HeaderProps> = ({ toggleTheme, theme }) => {
 
   return (
     <Container showHeader={showHeader}>
-      <p onClick={() => selectMenu('welcome')}>F</p>
+      <Logo onClick={() => selectMenu('welcome')} />
 
       <div>
         <div>

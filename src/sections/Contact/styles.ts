@@ -9,6 +9,7 @@ export const Content = styled.div`
 
   @media(max-width: 520px) {
     flex-direction: column;
+    font-size: 14px;
   }
 
   > div {

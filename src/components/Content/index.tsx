@@ -4,12 +4,12 @@ import { useSelector, RootStateOrAny } from 'react-redux';
 
 import { Container } from './styles';
 
-import Welcome from '../Welcome';
-import About from '../About';
-import Carrer from '../Carrer';
-import Portfolio from '../Portfolio';
-import Skills from '../Skills';
-import Contact from '../Contact';
+import Welcome from '../../sections/Welcome';
+import About from '../../sections/About';
+import Carrer from '../../sections/Carrer';
+import Portfolio from '../../sections/Portfolio';
+import Skills from '../../sections/Skills';
+import Contact from '../../sections/Contact';
 
 const Content: React.FC = () => {
   const selected = useSelector((state: RootStateOrAny) => state.menu.selected);

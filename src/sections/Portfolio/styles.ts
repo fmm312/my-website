@@ -2,6 +2,10 @@ import styled from 'styled-components';
 
 export const Container = styled.div`
   color: ${(props) => props.theme.colors.text};
+
+  @media(max-width: 520px) {
+   font-size: 14px;
+  }
 `;
 
 export const Filters = styled.div`
@@ -49,6 +53,10 @@ export const Content = styled.div`
     &:hover {
       background-color: ${(props) => props.theme.colors.primary};
       color: ${(props) => props.theme.colors.text};
+    }
+
+    @media(max-width: 520px) {
+    font-size: 10px;
     }
   }
   
