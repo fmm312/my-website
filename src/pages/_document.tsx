@@ -35,7 +35,13 @@ export default class MyDocument extends Document {
           <link rel="preconnect" href="https://fonts.gstatic.com" />
           <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700&family=Poppins:wght@700;800;900&display=swap" rel="stylesheet" />
           <link rel="icon" href="/logo.png" />
+
           <title>Felipe Menezes</title>
+
+          <meta name="title" content="Felipe Menezes" />
+          <meta name="description" content="Software engineer, JavaScript enthusiast. Passionate about clean code, usability and UX." />
+          <meta property="og:image" content="/logo.png" />
+          <meta property="og:image:type" content="image/png" />
         </Head>
         <body>
           <Main />
