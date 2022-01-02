@@ -1,9 +1,11 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-  padding: 80px 20px !important;
   color: ${(props) => props.theme.colors.text};
   margin-bottom: 200px;
+  position: fixed;
+  left: 20%;
+  width: 100%;
 
   @media(min-width: 1600px) {
     padding: 80px 300px;
@@ -15,6 +17,11 @@ export const Container = styled.div`
     font-weight: 400;
     line-height: 30px;
     margin-bottom: -25px;
+
+    @media(max-width: 520px) {
+      font-size: 16px;
+      line-height: 22px;
+    }
 
     > span {
       color: #00adb5;
@@ -30,6 +37,11 @@ export const Container = styled.div`
     font-size: 54px;
     line-height: 65px;
     font-weight: 900;
+
+    @media(max-width: 520px) {
+      font-size: 20px;
+      line-height: 28px;
+    }
   }
 
   button {
@@ -45,6 +57,11 @@ export const Container = styled.div`
     letter-spacing: 3.5px;
     font-weight: 600;
     position: absolute;
+
+    @media(max-width: 520px) {
+      padding: 8px 16px;
+      font-size: 10px;
+    }
   }
 
   button:hover {

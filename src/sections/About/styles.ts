@@ -19,9 +19,8 @@ export const ImageContainer = styled.div`
   height: 170px;
   background-size: cover;
 
-  @media(min-width: 1400px) {
-    width: 420px;
-    height: 240px;
+  @media(max-width: 520px) {
+    display: none;
   }
 `;
 
@@ -45,5 +44,9 @@ export const SkillsContainer = styled.div`
 
   > div {
     margin-right: 40px;
+
+    @media(max-width: 520px) {
+      margin-right: 20px;
+    }
   }
 `;

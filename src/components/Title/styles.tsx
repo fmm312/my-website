@@ -10,6 +10,10 @@ export const Line = styled.div`
   width: 200px;
   margin-left: 20px;
   opacity: .2;
+
+  @media(max-width: 520px) {
+    display: none;
+  }
 `;
 
 export const Title = styled.h1`
@@ -17,6 +21,10 @@ export const Title = styled.h1`
   font-family: 'Poppins', sans-serif;
   font-weight: 800;
   font-size: 28px;
+
+  @media(max-width: 520px) {
+    font-size: 18px;
+  }
 `;
 
 export const NumberTitle = styled.h1`
@@ -26,4 +34,9 @@ export const NumberTitle = styled.h1`
   margin-right: 15px;
   position: relative;
   top: 2px;
+
+  @media(max-width: 520px) {
+    font-size: 16px;
+    margin-right: 8px;
+  }
 `;

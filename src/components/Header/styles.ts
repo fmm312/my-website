@@ -54,12 +54,26 @@ export const Container = styled.div<ContainerProps>`
     &:hover {
       filter: brightness(1.75);
     }
+
+    @media(max-width: 520px) {
+      margin-left: 25px;
+    }
   }
 
   > div {
     display: flex;
     align-items: center;
     margin-right: 60px;
+
+    @media(max-width: 520px) {
+      margin-right: 25px;
+    }
+
+    > div {
+      @media(max-width: 520px) {
+        display: none;
+      }
+    }
 
     .icon {
       font-size: 26px;
@@ -86,15 +100,52 @@ export const Container = styled.div<ContainerProps>`
     &:hover {
       color: ${(props) => props.theme.colors.primary};
     }
+
+    @media(max-width: 520px) {
+      margin-right: 0px;
+      margin-bottom: 20px;
+    }
+  }
+`;
+
+export const ResposiveMenuButton = styled.button`
+  display: none;
+
+  @media(max-width: 520px) {
+    display: initial;
+    margin-left: 10px;
+    background: transparent;
+    color: #ffffff;
+    font-size: 24px;
+    border: none;
+    position: relative;
+    top: 3px;
+  }
+`;
+
+export const ResponsiveMenu = styled.div`
+  display: none !important;
+
+  .responsiveCloseMenuIcon {
+    position: absolute;
+    right: 12px;
+    font-size: 20px;
   }
 
-  .activeMenuName {
-    font-family: 'Nunito Sans', sans-serif;
-    font-size: 16px;
-    margin-right: 25px;
-    transition: 0.5s;
-    cursor: pointer;
-    letter-spacing: 0.5px;
-    color: ${(props) => props.theme.colors.primary};
+  @media(max-width: 520px) {
+    width: 180px;
+    height: 200vh;
+    background: ${(props) => props.theme.colors.primary};
+    position: absolute;
+    right: -25px;
+    top: 0;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 2px 8px;
+    color: #ffffff;
+    display: flex !important;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+    flex-direction: column;
   }
 `;

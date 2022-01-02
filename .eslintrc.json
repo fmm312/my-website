@@ -20,6 +20,8 @@
     "import/no-unresolved": "off",
     "import/extensions": "off",
     "import/no-extraneous-dependencies": "off",
-    "import/prefer-default-export": "off"
+    "import/prefer-default-export": "off",
+    "react/button-has-type": "off",
+    "react/jsx-no-bind": "off"
   }
 }

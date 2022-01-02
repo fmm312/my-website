@@ -7,8 +7,16 @@ export const Content = styled.div`
   margin-top: -15px;
   display: flex;
 
+  @media(max-width: 520px) {
+    flex-direction: column;
+  }
+
   > div {
     margin-right: 80px;
+
+    @media(max-width: 520px) {
+      margin-right: 0px;
+    }
   }
 
   button {
@@ -53,11 +61,6 @@ export const QRCode = styled.div`
   background-image: url('/wa.link_nzp900.png');
   height: 200px;
   background-size: cover;
-
-  @media(min-width: 1400px) {
-    width: 420px;
-    height: 240px;
-  }
 `;
 
 export const ImageContainer = styled.div`

@@ -4,7 +4,6 @@ import { ThemeProvider } from 'styled-components';
 import { GlobalStyle } from '../styles/GlobalStyle';
 import light from '../styles/themes/light';
 import dark from '../styles/themes/dark';
-import { Container } from '../styles/Layout';
 
 import Header from '../components/Header';
 import Menu from '../components/Menu';
@@ -36,12 +35,12 @@ function App() {
         {renderSplash ? (
           <Splash />
         ) : (
-          <Container>
+          <>
             <Header toggleTheme={toggleTheme} theme={theme} />
             <Content />
             <Menu />
             <Rigth />
-          </Container>
+          </>
         )}
       </ThemeProvider>
     </>

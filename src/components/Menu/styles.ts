@@ -45,4 +45,8 @@ export const Container = styled.div`
   a {
     color: ${(props) => props.theme.colors.text};
   }
+
+  @media(max-width: 520px) {
+    display: none;
+  }
 `;

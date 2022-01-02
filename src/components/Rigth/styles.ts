@@ -3,6 +3,10 @@ import styled from 'styled-components';
 export const Container = styled.div`
   grid-area: right;
 
+  @media(max-width: 520px) {
+    display: none;
+  }
+
   p {
     transform: rotate(90deg);
     color: ${(props) => props.theme.colors.text};
