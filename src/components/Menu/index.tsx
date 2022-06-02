@@ -45,7 +45,6 @@ const Menu: React.FC = () => {
       <Logo onClick={() => dispatch({ type: 'SELECT_MENU', selected: '' })} />
 
       <MenuIcons>
-        {/* <Fade bottom duration={500} delay={1800}> */}
         {list.map((element) => (
           <a
             href={element.target}
@@ -55,7 +54,6 @@ const Menu: React.FC = () => {
             {element.item}
           </a>
         ))}
-        {/* </Fade> */}
       </MenuIcons>
     </Container>
   );

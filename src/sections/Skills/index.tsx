@@ -12,6 +12,7 @@ import Title from '../../components/Title';
 import {
   Container,
   Text,
+  SkillsDescription,
 } from './styles';
 
 const Articles: React.FC = () => (
@@ -22,13 +23,7 @@ const Articles: React.FC = () => (
         step="03."
       />
 
-      <div
-        style={{
-          display: 'flex',
-          justifyContent: 'space-between',
-          alignItems: 'center',
-        }}
-      >
+      <SkillsDescription>
         <Text>
           <BiRightArrow className="skill-icon-arrow" />
           {' '}
@@ -89,7 +84,7 @@ const Articles: React.FC = () => (
             </div>
           </div>
         </div>
-      </div>
+      </SkillsDescription>
     </Container>
   </Fade>
 );

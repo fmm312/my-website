@@ -17,16 +17,6 @@ const Portfolio: React.FC = () => (
         step="04."
       />
 
-      {/* <Filters>
-          <ButtonFilter>
-            Open Source
-          </ButtonFilter>
-
-          <ButtonFilter>
-            Posts
-          </ButtonFilter>
-        </Filters> */}
-
       <Content>
         <Text>
           My Github repository is where I host code for some interesting projects

@@ -5,7 +5,7 @@ export const Container = styled.div`
   display: flex;
   flex-direction: column;
 
-  @media(max-width: 520px) {
+  @media(max-width: 768px) {
    font-size: 14px;
   }
 
@@ -160,11 +160,25 @@ export const Container = styled.div`
 export const Text = styled.p`
   width: 50%;
 
+  @media(max-width: 768px) {
+    width: 100%;
+  }
+
 .skill-icon-arrow {
     color: ${(props) => props.theme.colors.primary};
     margin-right: 15px;
     position: relative;
     top: 3px;
     font-size: 12px;
+  }
+`;
+
+export const SkillsDescription = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  @media(max-width: 768px) {
+    flex-wrap: wrap;
   }
 `;

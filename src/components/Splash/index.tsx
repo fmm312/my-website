@@ -10,9 +10,9 @@ const Splash: React.FC = () => (
       <span>F</span>
     </Zoom>
 
-    <p>
+    {/* <p>
       Felipe is working
-    </p>
+    </p> */}
 
     <div>
       <div className="progressBar" />

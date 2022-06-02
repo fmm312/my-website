@@ -7,10 +7,6 @@ export const Container = styled.div`
   left: 20%;
   width: 100%;
 
-  @media(min-width: 1600px) {
-    padding: 80px 300px;
-  }
-
   > h2 {
     font-family: 'Poppins', sans-serif;
     font-size: 22px;

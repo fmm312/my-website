@@ -16,8 +16,4 @@ export const Container = styled.div`
     height: auto;
     min-height: 100vh;
   }
-
-  @media(min-width: 1600px) {
-    padding: 80px 340px;
-  }
 `;

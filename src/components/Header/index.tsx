@@ -2,33 +2,44 @@ import { useState, useEffect } from 'react';
 import { useDispatch, useSelector, RootStateOrAny } from 'react-redux';
 import Switch from 'react-switch';
 
-import { Container } from './styles';
+import { AiOutlineUser } from 'react-icons/ai';
+import { HiOutlineDesktopComputer } from 'react-icons/hi';
+import { FaRegLightbulb } from 'react-icons/fa';
+import { FiMail } from 'react-icons/fi';
+import { DiCodeBadge } from 'react-icons/di';
+
+import { Container, ResponsiveMenu, Logo } from './styles';
 
 const itens = [
   {
     name: 'About',
     number: '01.',
     target: 'about',
+    icon: <AiOutlineUser />,
   },
   {
     name: 'Experience',
     number: '02.',
     target: 'experience',
+    icon: <DiCodeBadge />,
   },
   {
     name: 'Skills',
     number: '03.',
     target: 'skills',
+    icon: <HiOutlineDesktopComputer />,
   },
   {
     name: 'Projects',
     number: '04.',
     target: 'portfolio',
+    icon: <FaRegLightbulb />,
   },
   {
     name: 'Contact',
     number: '05.',
     target: 'contact',
+    icon: <FiMail />,
   },
 ];
 
@@ -66,7 +77,7 @@ const Header: React.FC<HeaderProps> = ({ toggleTheme, theme }) => {
                 className="menuName"
                 style={
                   selected === item.target
-                    ? { color: '#00adb5' }
+                    ? { color: '#00adb5', borderBottom: '2px solid #00adb5' }
                     : null
                 }
                 onClick={() => selectMenu(item.target)}
@@ -88,6 +99,18 @@ const Header: React.FC<HeaderProps> = ({ toggleTheme, theme }) => {
           onColor="#00adb5"
         />
       </div>
+
+      <Logo onClick={() => dispatch({ type: 'SELECT_MENU', selected: '' })} />
+
+      <ResponsiveMenu>
+        {itens.map((item) => (
+          <span
+            onClick={() => selectMenu(item.target)}
+          >
+            {item.icon}
+          </span>
+        ))}
+      </ResponsiveMenu>
     </Container>
   );
 };
