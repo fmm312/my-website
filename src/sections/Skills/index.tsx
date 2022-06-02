@@ -64,7 +64,7 @@ const Articles: React.FC = () => (
           <b>Other skills:</b>
           {' '}
           unit tests with React,
-          agile methodologies, UX, Design System, CI/CD.
+          agile methodologies, UX, Design System.
         </Text>
 
         <div className="cube-container">

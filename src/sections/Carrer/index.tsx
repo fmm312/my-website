@@ -27,32 +27,42 @@ const Carrer: React.FC = () => (
               <TimelineTitle>
                 Software Engineer
                 <CompanyName>
-                  @Somapay
+                  @SuperSim
                 </CompanyName>
               </TimelineTitle>
-              <TimelineDescription>ago. de 2019 – moment</TimelineDescription>
+              <TimelineDescription>jan/2022 – moment</TimelineDescription>
             </div>
 
             <div className="content">
               <TimelineTitle>
-                Desenvolvedor e Web Designer
+                Software Engineer
+                <CompanyName>
+                  @Somapay
+                </CompanyName>
+              </TimelineTitle>
+              <TimelineDescription>ago/2019 – jan/2022</TimelineDescription>
+            </div>
+
+            <div className="content">
+              <TimelineTitle>
+                Software Web developer
                 <CompanyName>
                   @Freelancer
                 </CompanyName>
               </TimelineTitle>
               <TimelineDescription>
-                dez. de 2016 – ago. de 2019 | 2 anos 9 meses
+                dez/2016 – ago/2019
               </TimelineDescription>
             </div>
 
             <div className="content">
               <TimelineTitle>
-                Desenvolvedor Front end
+                Software Web developer
                 <CompanyName>
                   @pescapreços.com
                 </CompanyName>
               </TimelineTitle>
-              <TimelineDescription>ago. de 2017 – jan. de 2018 | 6 meses</TimelineDescription>
+              <TimelineDescription>ago/2017 – jan/2018</TimelineDescription>
             </div>
           </Line>
         </Timeline>
