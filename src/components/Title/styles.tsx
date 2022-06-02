@@ -20,10 +20,24 @@ export const Title = styled.h1`
   color: ${(props) => props.theme.colors.text};
   font-family: 'Poppins', sans-serif;
   font-weight: 800;
-  font-size: 28px;
-
+  font-size: 36px;
+  letter-spacing: 0.5px;
+  cursor: default;
+  
   @media(max-width: 520px) {
     font-size: 18px;
+  }
+
+  &:hover {
+    animation: gelatine 0.5s;
+    color: ${(props) => props.theme.colors.primary};
+  }
+
+  @keyframes gelatine {
+    from, to { transform: scale(1, 1); }
+    25% { transform: scale(0.9, 1.3); }
+    50% { transform: scale(1.1, 1.1); }
+    75% { transform: scale(0.95, 1.25); }
   }
 `;
 

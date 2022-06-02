@@ -17,7 +17,7 @@ const Carrer: React.FC = () => (
     <Container>
       <div>
         <Title
-          title="Professional experience"
+          title="Experience"
           step="02."
         />
 

@@ -10,10 +10,14 @@ export default function TitleComponent({
   title,
   disabledLine = false,
 }) {
+  const letters = title.split('');
+
   return (
     <TitleContainer>
       <NumberTitle>{step}</NumberTitle>
-      <Title>{title}</Title>
+      {letters.map((item) => (
+        <Title>{item}</Title>
+      ))}
       {!disabledLine && <Line />}
     </TitleContainer>
   );
