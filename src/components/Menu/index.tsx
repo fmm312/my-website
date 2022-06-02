@@ -1,4 +1,4 @@
-import Fade from 'react-reveal/Fade';
+import { useDispatch } from 'react-redux';
 
 import {
   AiOutlineMedium,
@@ -6,13 +6,19 @@ import {
   AiOutlineWhatsApp,
 } from 'react-icons/ai';
 import { FiGithub, FiLinkedin } from 'react-icons/fi';
-import { Container } from './styles';
+
+import {
+  Container,
+  MenuIcons,
+  Logo,
+} from './styles';
 
 const Menu: React.FC = () => {
   const list = [
     {
       item: <FiGithub className="icon-menu" />,
       target: 'https://github.com/fmm312',
+      name: 'home',
     },
     {
       item: <FiLinkedin className="icon-menu" />,
@@ -32,16 +38,25 @@ const Menu: React.FC = () => {
     },
   ];
 
+  const dispatch = useDispatch();
+
   return (
     <Container>
-      <Fade bottom duration={500} delay={1800}>
+      <Logo onClick={() => dispatch({ type: 'SELECT_MENU', selected: '' })} />
+
+      <MenuIcons>
+        {/* <Fade bottom duration={500} delay={1800}> */}
         {list.map((element) => (
-          <a href={element.target} target="_blank" rel="noreferrer">
+          <a
+            href={element.target}
+            target="_blank"
+            rel="noreferrer"
+          >
             {element.item}
           </a>
         ))}
-      </Fade>
-      <span />
+        {/* </Fade> */}
+      </MenuIcons>
     </Container>
   );
 };

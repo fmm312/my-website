@@ -22,11 +22,12 @@ export const Container = styled.div<ContainerProps>`
     : 'none')};
   padding: 20px 0px;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
   align-items: center;
   z-index: 1000;
   position: fixed;
-  width: 100%;
+  right: 0;
+  width: 95%;
 
   @media(min-width: 1600px) {
     justify-content: space-around;

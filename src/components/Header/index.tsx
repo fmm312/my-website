@@ -1,13 +1,8 @@
 import { useState, useEffect } from 'react';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector, RootStateOrAny } from 'react-redux';
 import Switch from 'react-switch';
-import Fade from 'react-reveal/Fade';
 
-import { AiOutlineMenu, AiOutlineClose } from 'react-icons/ai';
-
-import {
-  Container, ResposiveMenuButton, ResponsiveMenu, Logo,
-} from './styles';
+import { Container } from './styles';
 
 const itens = [
   {
@@ -44,8 +39,8 @@ interface HeaderProps {
 
 const Header: React.FC<HeaderProps> = ({ toggleTheme, theme }) => {
   const [showHeader, setShowHeader] = useState(false);
-  const [showResponsiveMenu, setShowResponsiveMenu] = useState(false);
   const dispatch = useDispatch();
+  const selected = useSelector((state: RootStateOrAny) => state.menu.selected);
 
   useEffect(() => {
     if (typeof window !== 'undefined') {
@@ -53,19 +48,12 @@ const Header: React.FC<HeaderProps> = ({ toggleTheme, theme }) => {
     }
   }, []);
 
-  function toggleResponsiveMenu() {
-    setShowResponsiveMenu(!showResponsiveMenu);
-  }
-
   function selectMenu(target) {
-    setShowResponsiveMenu(false);
     dispatch({ type: 'SELECT_MENU', selected: target });
   }
 
   return (
     <Container showHeader={showHeader}>
-      <Logo onClick={() => selectMenu('welcome')} />
-
       <div>
         <div>
           {itens.map((item) => (
@@ -74,7 +62,15 @@ const Header: React.FC<HeaderProps> = ({ toggleTheme, theme }) => {
                 {item.number}
               </span>
 
-              <span className="menuName" onClick={() => selectMenu(item.target)}>
+              <span
+                className="menuName"
+                style={
+                  selected === item.target
+                    ? { color: '#00adb5' }
+                    : null
+                }
+                onClick={() => selectMenu(item.target)}
+              >
                 {item.name}
               </span>
             </>
@@ -91,27 +87,7 @@ const Header: React.FC<HeaderProps> = ({ toggleTheme, theme }) => {
           onChange={toggleTheme}
           onColor="#00adb5"
         />
-
-        <ResposiveMenuButton onClick={toggleResponsiveMenu}>
-          <AiOutlineMenu />
-        </ResposiveMenuButton>
       </div>
-
-      {showResponsiveMenu && (
-        <ResponsiveMenu>
-          <AiOutlineClose className="responsiveCloseMenuIcon" onClick={toggleResponsiveMenu} />
-          <br />
-          {' '}
-          <br />
-          <Fade right duration={800}>
-            {itens.map((item) => (
-              <span className="menuName" onClick={() => selectMenu(item.target)}>
-                {item.name}
-              </span>
-            ))}
-          </Fade>
-        </ResponsiveMenu>
-      )}
     </Container>
   );
 };

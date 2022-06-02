@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { ThemeProvider } from 'styled-components';
+import { useSelector, RootStateOrAny } from 'react-redux';
 
 import { GlobalStyle } from '../styles/GlobalStyle';
 import light from '../styles/themes/light';
@@ -18,11 +19,19 @@ function App() {
   const [renderSplash, setRenderSplash] = useState(true);
   const [theme, setTheme] = useState(true);
 
-  useEffect(() => {
+  const selected = useSelector((state: RootStateOrAny) => state.menu.selected);
+
+  function renderSplashScreen() {
+    setRenderSplash(true);
+
     setTimeout(() => {
       setRenderSplash(false);
-    }, 3000);
-  }, []);
+    }, 1820);
+  }
+
+  useEffect(() => {
+    renderSplashScreen();
+  }, [selected]);
 
   function toggleTheme() {
     setTheme(!theme);
@@ -33,7 +42,11 @@ function App() {
       <GlobalStyle />
       <ThemeProvider theme={theme ? dark : light}>
         {renderSplash ? (
-          <Splash />
+          <>
+            <Splash />
+            <Menu />
+            <Rigth />
+          </>
         ) : (
           <>
             <Header toggleTheme={toggleTheme} theme={theme} />
