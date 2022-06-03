@@ -125,8 +125,16 @@ export const FormGroup = styled.div`
     font-size: 12px;
     letter-spacing: 3.5px;
     font-weight: 600;
+    height: 38px;
+    width: 111px;
+    text-align: center;
 
-    &:hover {
+    &:disabled {
+      opacity: .5;
+      cursor: not-allowed;
+    }
+
+    &:hover:not([disabled]) {
       background-color: ${(props) => props.theme.colors.primary};
       color: ${(props) => props.theme.colors.text};
     }
@@ -134,5 +142,38 @@ export const FormGroup = styled.div`
     @media(max-width: 768px) {
       font-size: 10px;
     }
+
+    .loader {
+      color: ${(props) => props.theme.colors.text};
+      font-size: 16px;
+      animation: rotating 2s linear infinite;
+    }
+
+    @keyframes rotating {
+      from {
+        -webkit-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+        transform: rotate(0deg);
+      }
+      to {
+        -webkit-transform: rotate(360deg);
+        -o-transform: rotate(360deg);
+        transform: rotate(360deg);
+      }
+    }
   }
+`;
+
+export const Snackbar = styled.div`
+  background-color: #4AA049;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 7px;
+  width: 250px;
+  padding: 15px;
+  border-radius: 4px;
+  position: fixed;
+  bottom: 20px;
+  right: 70px;
 `;
