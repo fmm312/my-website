@@ -100,7 +100,7 @@ export const Logo = styled.div`
   }
 `;
 
-export const ResponsiveMenu = styled.div<ContainerProps>`
+export const ResponsiveMenu = styled.div`
   display: none !important;
 
   @media(max-width: 768px) {

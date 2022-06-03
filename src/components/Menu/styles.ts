@@ -46,7 +46,7 @@ export const Container = styled.div`
     color: ${(props) => props.theme.colors.text};
   }
 
-  @media(max-width: 520px) {
+  @media(max-width: 768px) {
     display: none;
   }
 `;
@@ -54,48 +54,6 @@ export const Container = styled.div`
 export const MenuIcons = styled.div`
   display: flex;
   flex-direction: column;
-`;
-
-export const ResposiveMenuButton = styled.button`
-  display: none;
-
-  @media(max-width: 520px) {
-    display: initial;
-    margin-left: 10px;
-    background: transparent;
-    color: #ffffff;
-    font-size: 24px;
-    border: none;
-    position: relative;
-    top: 3px;
-  }
-`;
-
-export const ResponsiveMenu = styled.div`
-  display: none !important;
-
-  .responsiveCloseMenuIcon {
-    position: absolute;
-    right: 12px;
-    font-size: 20px;
-  }
-
-  @media(max-width: 520px) {
-    width: 180px;
-    height: 200vh;
-    background: ${(props) => props.theme.colors.primary};
-    position: absolute;
-    right: -25px;
-    top: 0;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 2px 8px;
-    color: #ffffff;
-    display: flex !important;
-    justify-content: flex-start;
-    align-items: center;
-    padding: 20px;
-    box-sizing: border-box;
-    flex-direction: column;
-  }
 `;
 
 export const Logo = styled.div`
@@ -110,7 +68,7 @@ export const Logo = styled.div`
     filter: brightness(1.75);
   }
 
-  @media(max-width: 520px) {
+  @media(max-width: 768px) {
     margin-left: 25px;
   }
 `;

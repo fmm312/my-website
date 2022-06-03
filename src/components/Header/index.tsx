@@ -16,30 +16,35 @@ const itens = [
     number: '01.',
     target: 'about',
     icon: <AiOutlineUser />,
+    id: 1,
   },
   {
     name: 'Experience',
     number: '02.',
     target: 'experience',
     icon: <DiCodeBadge />,
+    id: 2,
   },
   {
     name: 'Skills',
     number: '03.',
     target: 'skills',
     icon: <HiOutlineDesktopComputer />,
+    id: 3,
   },
   {
     name: 'Projects',
     number: '04.',
     target: 'portfolio',
     icon: <FaRegLightbulb />,
+    id: 4,
   },
   {
     name: 'Contact',
     number: '05.',
     target: 'contact',
     icon: <FiMail />,
+    id: 5,
   },
 ];
 
@@ -75,6 +80,7 @@ const Header: React.FC<HeaderProps> = ({ toggleTheme, theme }) => {
 
               <span
                 className="menuName"
+                key={item.id}
                 style={
                   selected === item.target
                     ? { color: '#00adb5', borderBottom: '2px solid #00adb5' }
