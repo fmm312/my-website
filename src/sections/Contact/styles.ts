@@ -92,6 +92,7 @@ export const FormGroup = styled.div`
     padding: 5px 12px;
     border-radius: 4px;
     transition: all 500ms ease;
+    font-family: 'Nunito Sans', sans-serif;
 
     &:focus {
       border-bottom: 2px solid ${(props) => props.theme.colors.primary};;
@@ -107,6 +108,7 @@ export const FormGroup = styled.div`
     color: #ffffff;
     transition: all 500ms ease;
     padding: 8px 12px;
+    font-family: 'Nunito Sans', sans-serif;
 
     &:focus {
       border-bottom: 2px solid ${(props) => props.theme.colors.primary};;
@@ -176,4 +178,30 @@ export const Snackbar = styled.div`
   position: fixed;
   bottom: 20px;
   right: 70px;
+`;
+
+export const ContactInfos = styled.div`
+  margin-top: 12px;
+
+  .item-arrow {
+    color: ${(props) => props.theme.colors.primary};
+    margin-right: 15px;
+    position: relative;
+    top: 3px;
+    font-size: 12px;
+  }
+
+  p {
+    font-size: 12px;
+    letter-spacing: 0.7px;
+    opacity: .8;
+  }
+
+  > div {
+    margin-right: 40px;
+
+    @media(max-width: 520px) {
+      margin-right: 20px;
+    }
+  }
 `;

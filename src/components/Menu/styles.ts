@@ -34,14 +34,6 @@ export const Container = styled.div`
     transform: translateY(-4px);
   }
 
-  /* > span {
-    border-right: 1px solid ${(props) => props.theme.colors.text};
-    height: 100px;
-    position: fixed;
-    bottom: 0;
-    opacity: .2;
-  } */
-
   a {
     color: ${(props) => props.theme.colors.text};
   }

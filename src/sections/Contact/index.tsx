@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import Fade from 'react-reveal/Fade';
+import axios from 'axios';
 
-import { BiLoaderAlt } from 'react-icons/bi';
+import { BiLoaderAlt, BiRightArrow } from 'react-icons/bi';
 import { AiOutlineCheckCircle } from 'react-icons/ai';
 
 import {
@@ -10,8 +11,7 @@ import {
   Form,
   FormGroup,
   Snackbar,
-  QRCode,
-  ImageContainer,
+  ContactInfos,
 } from './styles';
 
 import Title from '../../components/Title';
@@ -19,28 +19,37 @@ import Title from '../../components/Title';
 const Contact: React.FC = () => {
   const [loading, setLoading] = useState(false);
   const [showSnackbar, setShowSnackbar] = useState(false);
-  const [name, setName] = useState('');
-  const [email, setEmail] = useState('');
-  const [subject, setSubject] = useState('');
-  const [message, setMessage] = useState('');
+  const [formValues, setFormValues] = useState({
+    name: '',
+    email: '',
+    subject: '',
+    message: '',
+  });
 
-  const DISABLED_BUTTON = !name || !email || !message;
+  const DISABLED_BUTTON = !formValues.name || !formValues.email || !formValues.message || loading;
 
   function sendMessage() {
     setLoading(true);
 
-    setTimeout(() => {
-      setLoading(false);
-      setShowSnackbar(true);
-      setName('');
-      setEmail('');
-      setSubject('');
-      setMessage('');
+    axios.post('https://sheet.best/api/sheets/7e5e806b-ea2c-487d-9737-58c495e040cf', formValues)
+      .then(() => {
+        setLoading(false);
+        setShowSnackbar(true);
+        setFormValues({
+          name: '',
+          email: '',
+          subject: '',
+          message: '',
+        });
 
-      setTimeout(() => {
-        setShowSnackbar(false);
-      }, 5000);
-    }, 3000);
+        setTimeout(() => {
+          setShowSnackbar(false);
+        }, 5000);
+      });
+  }
+
+  function onChangeTextField(e) {
+    setFormValues({ ...formValues, [e.target.name]: e.target.value });
   }
 
   return (
@@ -63,31 +72,48 @@ const Contact: React.FC = () => {
               </p>
             </div>
 
-            <ImageContainer>
-              <QRCode />
-            </ImageContainer>
+            <ContactInfos>
+              <p>
+                <BiRightArrow className="item-arrow" />
+                Fortaleza - Brasil
+              </p>
+              <p>
+                <BiRightArrow className="item-arrow" />
+                Email: fmm312@gmail.com
+              </p>
+              <p>
+                <BiRightArrow className="item-arrow" />
+                Phone: +55 (85)98924-9894
+              </p>
+            </ContactInfos>
           </Content>
 
           <Form>
             <FormGroup>
               <input
                 placeholder="Name*"
-                value={name}
-                onChange={(event) => setName(event.target.value)}
+                value={formValues.name}
+                name="name"
+                type="text"
+                onChange={onChangeTextField}
               />
             </FormGroup>
 
             <FormGroup>
               <input
                 placeholder="Email*"
-                value={email}
-                onChange={(event) => setEmail(event.target.value)}
+                value={formValues.email}
+                name="email"
+                type="text"
+                onChange={onChangeTextField}
               />
 
               <input
                 placeholder="Subject"
-                value={subject}
-                onChange={(event) => setSubject(event.target.value)}
+                value={formValues.subject}
+                name="subject"
+                type="text"
+                onChange={onChangeTextField}
               />
             </FormGroup>
 
@@ -95,8 +121,9 @@ const Contact: React.FC = () => {
               <textarea
                 rows={7}
                 placeholder="Mensagem*"
-                value={message}
-                onChange={(event) => setMessage(event.target.value)}
+                value={formValues.message}
+                name="message"
+                onChange={onChangeTextField}
               />
             </FormGroup>
 
