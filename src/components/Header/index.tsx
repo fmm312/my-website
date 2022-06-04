@@ -96,10 +96,10 @@ const Header: React.FC<HeaderProps> = ({ toggleTheme, theme }) => {
 
         <Switch
           checked={theme}
-          checkedIcon={false}
-          uncheckedIcon={false}
-          height={15}
-          width={40}
+          checkedIcon={<span style={{ position: 'relative', top: 2, left: 4 }}>🌜</span>}
+          uncheckedIcon={<span style={{ position: 'relative', top: 2, left: 8 }}>🌞</span>}
+          height={25}
+          width={55}
           handleDiameter={20}
           onChange={toggleTheme}
           onColor="#00adb5"
@@ -112,6 +112,11 @@ const Header: React.FC<HeaderProps> = ({ toggleTheme, theme }) => {
         {itens.map((item) => (
           <span
             onClick={() => selectMenu(item.target)}
+            style={
+              selected === item.target
+                ? { color: '#00adb5' }
+                : null
+            }
           >
             {item.icon}
           </span>
