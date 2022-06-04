@@ -49,7 +49,7 @@ export const MenuIcons = styled.div`
 `;
 
 export const Logo = styled.div`
-  background-image: url('/logo-large.jpg');
+  background-image: url('/logo-large.png');
   width: 40px;
   height: 40px;
   background-size: cover;

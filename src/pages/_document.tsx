@@ -34,7 +34,7 @@ export default class MyDocument extends Document {
         <Head>
           <link rel="preconnect" href="https://fonts.gstatic.com" />
           <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700&family=Poppins:wght@700;800;900&display=swap" rel="stylesheet" />
-          <link rel="icon" href="/logo-large.jpg" />
+          <link rel="icon" href="/logo-large.png" />
 
           <title>Felipe Menezes</title>
 
@@ -43,8 +43,8 @@ export default class MyDocument extends Document {
           <meta property="og:title" content="Felipe Menezes" />
           <meta property="og:site_name" content="Website/portfolio" />
           <meta property="og:description" content="Software engineer, JavaScript enthusiast. Passionate about clean code, usability and UX." />
-          <meta property="og:image" content="/logo-large.jpg" />
-          <meta property="og:image:type" content="image/jpg" />
+          <meta property="og:image" content="/logo-large.png" />
+          <meta property="og:image:type" content="image/png" />
           {/* <meta property="og:image:width" content="150" />
           <meta property="og:image:height" content="150" /> */}
         </Head>

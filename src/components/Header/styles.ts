@@ -81,7 +81,7 @@ export const Container = styled.div<ContainerProps>`
 `;
 
 export const Logo = styled.div`
-  background-image: url('/logo-large.jpg');
+  background-image: url('/logo-large.png');
   width: 40px;
   height: 40px;
   background-size: cover;
