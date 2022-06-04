@@ -43,10 +43,10 @@ export default class MyDocument extends Document {
           <meta property="og:title" content="Felipe Menezes" />
           <meta property="og:site_name" content="Website/portfolio" />
           <meta property="og:description" content="Software engineer, JavaScript enthusiast. Passionate about clean code, usability and UX." />
-          <meta property="og:image" content="/logo.png" />
+          <meta property="og:image" content="/logo-large.png" />
           <meta property="og:image:type" content="image/png" />
-          <meta property="og:image:width" content="150" />
-          <meta property="og:image:height" content="150" />
+          {/* <meta property="og:image:width" content="150" />
+          <meta property="og:image:height" content="150" /> */}
         </Head>
         <body>
           <Main />
