@@ -49,16 +49,12 @@ export const MenuIcons = styled.div`
 `;
 
 export const Logo = styled.div`
-  background-image: url('/logo.png');
+  background-image: url('/logo-large.jpg');
   width: 40px;
   height: 40px;
   background-size: cover;
   transition: all 300ms ease;
   cursor: pointer;
-
-  &:hover {
-    filter: brightness(1.75);
-  }
 
   @media(max-width: 768px) {
     margin-left: 25px;
