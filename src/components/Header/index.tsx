@@ -97,9 +97,9 @@ const Header: React.FC<HeaderProps> = ({ toggleTheme, theme }) => {
         <Switch
           checked={theme}
           checkedIcon={<span style={{ position: 'relative', top: 2, left: 5 }}>🌜</span>}
-          uncheckedIcon={<span style={{ position: 'relative', top: 2, left: 8 }}>🌞</span>}
+          uncheckedIcon={<span style={{ position: 'relative', top: 2, left: 5 }}>🌞</span>}
           height={25}
-          width={55}
+          width={50}
           handleDiameter={20}
           onChange={toggleTheme}
           onColor="#00adb5"
